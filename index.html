@@ -6,11 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <title>Event Management | Production</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/images/logo_.png">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fonts-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chewy">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
     <!-- Vendors-->
     <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
@@ -19,6 +19,214 @@
     <!-- App & fonts-->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Work+Sans:300,400,500,700">
     <link rel="stylesheet" type="text/css" id="app-stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+
+<style type="text/css">
+
+.card{
+  width:280px;
+  height:350px;
+  position:absolute;
+  left:50%;
+  bottom: -50px;
+  transform:translate(-50%,-50%)perspective(2000px);
+  background:#b3b3b3;
+  transform-style:preserve-3d;
+  box-shadow:inset 300px 0 50px rgba(0,0,0,.5),0 20px 100px rgba(0,0,0,.5);
+  transition:1s;
+}
+.card:hover{
+  transform:translate(-50%,-50%) perspective(2000px) rotate(-10deg);  
+   box-shadow:inset 20px 0 50px rgba(0,0,0,.5),0 10px 100px rgba(0,0,0,.5);
+}
+.card:before{
+  content:'';
+  position:absolute;
+  top:-5px;
+  left:0;
+  width:100%;
+  height:5px;
+  background:#000000;
+  transform-origin:bottom;
+  transform:skewX(-45deg)
+}
+.card:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:-5px;
+  width:5px;
+  height:100%;
+  background:#000000;
+  transform-origin:left;
+  transform:skewY(-45deg);
+}
+.card .imgBox img{
+  height:100%;
+  width:100%;
+}
+
+.card .imgBox{
+  width:100%;
+  height:100%;
+  position:relative;
+  transform-origin:left;
+  transition:1s cubic-bezier(.15,1.7,.84,.58);
+}
+.card:hover .imgBox{
+  transform:rotateY(-125deg)
+}
+.card .details{
+  position:absolute;
+  top:0;left:0;
+  box-sizing:boreder-box;
+  padding:20px;
+    z-index:-1;
+
+/*Text Glow*/
+}
+@import url("https://fonts.googleapis.com/css?family=Nixie+One");
+@import url("https://fonts.googleapis.com/css?family=League+Script");
+.glow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sign {
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+#title {
+  font-size: 25px;
+}
+#trav {
+  -webkit-animation: blink 0.01s infinite alternate;
+  -moz-animation: blink 0.01s infinite alternate;
+  -o-animation: blink 0.01s infinite alternate;
+  animation: blink 0.01s infinite alternate;
+}
+#fade {
+  opacity: 0.8;
+  color: #ebffff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+  -webkit-animation: fade 3s infinite alternate;
+  -moz-animation: fade 3s infinite alternate;
+  -o-animation: fade 3s infinite alternate;
+  animation: fade 3s infinite alternate;
+}
+.neon-blue {
+  margin: 0 auto;
+  text-align: center;
+  color: #ebffff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+}
+.neon-purple {
+  font-family: 'League Script', Helvetica, Arial, sans-serif;
+  font-size: 100px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ccf;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5), 0 0 20px #fff, 0 0 10px #7d26cd, 0 0 50px #7d26cd;
+}
+@-moz-keyframes blink {
+  70% {
+    opacity: 0.7;
+  }
+}
+@-webkit-keyframes blink {
+  45% {
+    opacity: 0.5;
+  }
+}
+@-o-keyframes blink {
+  70% {
+    opacity: 0.7;
+  }
+}
+@keyframes blink {
+  70% {
+    opacity: 0.7;
+  }
+}
+@-moz-keyframes fade {
+  40% {
+    opacity: 0.8;
+  }
+  42% {
+    opacity: 0.1;
+  }
+  43% {
+    opacity: 0.8;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  46% {
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes fade {
+  40% {
+    opacity: 0.8;
+  }
+  42% {
+    opacity: 0.1;
+  }
+  43% {
+    opacity: 0.8;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  46% {
+    opacity: 0.8;
+  }
+}
+@-o-keyframes fade {
+  40% {
+    opacity: 0.8;
+  }
+  42% {
+    opacity: 0.1;
+  }
+  43% {
+    opacity: 0.8;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  46% {
+    opacity: 0.8;
+  }
+}
+@keyframes fade {
+  40% {
+    opacity: 0.8;
+  }
+  42% {
+    opacity: 0.1;
+  }
+  43% {
+    opacity: 0.8;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  46% {
+    opacity: 0.8;
+  }
+}
+/*Text Glow End*/
+
+/*Video Slider*/
+
+
+/*End*/
+    </style>
 
 </head>
 <body>
@@ -69,35 +277,63 @@
               </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url(assets/images/vilen.jpg);"><div class="number"><div id="K" style="margin-left: 104px;">Vilen<br><span style="font-size: 14px;margin-left: 34px;font-family: Segoe Script";>The Dark Family</span></div></div>
+
+            <!--Vilen-->
+
+            <div class="swiper-slide" style="background-image: url(assets/images/vilen.jpg);"><div class="number"><a href="https://gigsnap.in/assets/video/v!len.mp4" style="text-decoration: none;color: white"><div id="K" style="margin-left: 104px;">Vilen<br><span style="font-size: 14px;margin-left: 34px;font-family: Segoe Script";>The Dark Family</span></div></div></a>
           </div>
-            <div class="swiper-slide" style="background-image: url(assets/images/kaka.jpg);"><div class="number"><div id="K">Kaka<br><span style="font-size: 14px;margin-left: 45px;font-family: Segoe Script";>~ Waris Shah</span></div></div></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/7.jpg);"><div class="number"><div id="K" style="margin-left: 120px;font-size: 22px">Mask Box<br><span style="font-size: 11px;margin-left: 13px;font-family: Segoe Script";>Some Fire at Waters.</span></div></div></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/vivek.jpg);"><div class="number"><div id="K" style="margin-left: 131px;font-size: 22px">Vivek Singh<br><span style="font-size: 15px;margin-left: -45px;font-family: Segoe Script";>Parinda</span></div></div></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/terimiko.jpg);"><div class="number"><div id="K" style="margin-left: 138px;font-size: 20px">DJ Terimiko<br><span style="font-size: 12px;margin-left: -45px;font-family: Segoe Script";>Dark-Sider</span></div></div></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/sanam.jpg);"><div class="number"><div id="K" style="margin-left: 138px;font-size: 20px">Sanam Band<br><span style="font-size: 12px;margin-left: -90px;font-family: Segoe Script";>Drums</span></div></div></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/8.jpg);"><div class="number"><div id="K" style="margin-left: 100px;font-size: 28px">Kr$na<br><span style="font-size: 11px;margin-left: -30px;font-family: Segoe Script";>Dollar $</span></div></div></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/5.jpg);"><div class="number"><div id="K" style="margin-left: 100px;font-size: 28px">Akhil<br><span style="font-size: 11px;margin-left: -30px;font-family: Segoe Script";>Soulfull</span></div></div></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/para.jpg);"><div class="number"><div id="K" style="margin-left: 150px;font-size: 28px">Paradox<br><span style="font-size: 14px;margin-left: -90px;font-family: Segoe Script";>Fomo</span></div></div></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/6.jpg);"><div class="number"><div id="K">King</br><span style="font-size: 15px;margin-left: 39px;font-family: Segoe Script">The last ride</span></div></div></divassets/images/10.jpg>
+
+            <!--Parmish-->
+          <div class="swiper-slide" style="background-image: url(assets/images/parmish.jpg);"><div class="number"><a href="https://gigsnap.in/assets/video/parmish.mp4" style="text-decoration: none;color: white"><div id="K" style="font-size: 22px;">Parmish<br>Varma<br><span style="font-size: 14px;margin-left: 10px;font-family: Segoe Script";>~ Sparta</span></div></div></a></div>
+
+<!--Kaka-->
+          <div class="swiper-slide" style="background-image: url(assets/images/kaka.jpg);"><div class="number"><a href="https://gigsnap.in/assets/video/kaka.mp4" style="text-decoration: none;color: white"><div id="K">Kaka<br><span style="font-size: 14px;margin-left: 45px;font-family: Segoe Script";>~ Waris Shah</span></div></div></a></div>
+
+            <!--Mask box-->
+            <div class="swiper-slide" style="background-image: url(assets/images/7.jpg);"><div class="number"><a href="https://gigsnap.in/assets/video/mask-box.mp4" style="text-decoration: none;color: white"><div id="K" style="margin-left: 120px;font-size: 22px">Mask Box<br><span style="font-size: 11px;margin-left: 13px;font-family: Segoe Script";>Some Fire at Waters.</span></div></div></a></div>
+
+            <!--vivek
+            <div class="swiper-slide" style="background-image: url(assets/images/vivek.jpg);"><div class="number"><div id="K" style="margin-left: 131px;font-size: 22px">Vivek Singh<br><span style="font-size: 15px;margin-left: -45px;font-family: Segoe Script";>Parinda</span></div></div></div></a>-->
+
+            <!--DJ-->
+            <div class="swiper-slide" style="background-image: url(assets/images/Terimiko.jpg);"><div class="number" ><a href="https://gigsnap.in/assets/video/Dj.mp4" style="text-decoration: none;color: white"><div id="K" style="margin-left: 138px;font-size: 20px">DJ Terimiko<br><span style="font-size: 12px;margin-left: -45px;font-family: Segoe Script";>Dark-Sider</span></div></div></a></div>
+
+            <!--Sanam band-->
+           <div class="swiper-slide" style="background-image: url(assets/images/sanam.jpg);"><div class="number"><a href="https://gigsnap.in/assets/video/sanam.mp4" style="text-decoration: none;color: white"><div id="K" style="margin-left: 138px;font-size: 20px">Sanam Band<br><span style="font-size: 12px;margin-left: -90px;font-family: Segoe Script";>Drums</span></div></div></a></div>
+
+            <!--Krsna-->
+           <div class="swiper-slide" style="background-image: url(assets/images/8.jpg);"><div class="number"><a href="https://gigsnap.in/assets/video/krsna.mp4" style="text-decoration: none;color: white"><div id="K" style="margin-left: 100px;font-size: 28px">Kr$na<br><span style="font-size: 11px;margin-left: -30px;font-family: Segoe Script";>Dollar $</span></div></div></a></div>
+
+            <!--Akhil-->
+          <div class="swiper-slide" style="background-image: url(assets/images/5.jpg);"><div class="number"><div id="K" style="margin-left: 100px;font-size: 28px">Akhil<br><span style="font-size: 11px;margin-left: -30px;font-family: Segoe Script";>Soulfull</span></div></div></div>
+
+            <!--Paradox-->
+            <div class="swiper-slide" style="background-image: url(assets/images/para.jpg);"><div class="number"><a href="https://gigsnap.in/assets/video/paradox.mp4" style="text-decoration: none;color: white"><div id="K" style="margin-left: 150px;font-size: 28px">Paradox<br><span style="font-size: 14px;margin-left: -90px;font-family: Segoe Script";>Fomo</span></div></div></a></div>
+
+          <!--Amit-->
+          <div class="swiper-slide" style="background-image: url(assets/images/amit.jpg);"><div class="number"><a href="https://gigsnap.in/assets/video/amit.mp4" style="text-decoration: none;color: white"><div id="K">Kaka<br><span style="font-size: 14px;margin-left: 0px;font-family: Segoe Script";>~ SOT</span></div></div></a></div>
+
+            <!--King-->
+           <div class="swiper-slide" style="background-image: url(assets/images/6.jpg);"><div class="number" style="text-decoration: none;"><a href="https://gigsnap.in/assets/video/king.mp4" style="text-decoration: none;color: white"><div id="K" style="text-decoration: none;">King</br><span style="font-size: 15px;margin-left: 39px;font-family: Segoe Script;text-decoration: none;">The last ride</span></div></div></a></div>
+            
         </div>
-        <div class="swiper-pagination"></div>
+
     </div>
 <div class="container">
             <div class="hero__wrapper">
               <div class="service-wrapper" style="margin-top: 50px">
-                
                 <!-- service -->
                 <div class="service">
-                  <h2 class="service__title">Event Management</h2>
-                  <p class="service__text">Gigsnap was founded in 2020 at Bhopal and we have successfully executed more than 50+ events till date in India, We are a professional Event Management Company specialized in providing one stop solutions to all your event management needs. </p>
+                  <h2 class="service__title">Live Events & Producttion</h2>
+                  <p class="service__text">We have all the necessary equipment to produce a high-quality show, including sound systems, lighting, and staging. They will also have backup equipment in case of technical issues, ensuring that the show goes on smoothly without any interruptions. Professional concert production companies invest in the latest and best equipment to provide the highest quality experience for your audience.</p>
+
                 </div><!-- End / service -->
                 <!-- service -->
                 <div class="service">
+                 
                   <h2 class="service__title">Corporate Events</h2>
-                  <p class="service__text">We take care of Sports Management,corporate events, Special events Management and Brand Promotions. We have a team of experienced professionals. </p>
-                  <h2 class="service__title">Weddings</h2>
-                  <p class="service__text">Gigsnap is also specialized in planning Destination wedding management services. It is most couple’s desire to adventure off to an exotic location somewhere to have their dream wedding. </p>
+                  <p class="service__text">We take care of Sports Management,corporate events, Special events Management and Brand Promotions. We have a team of experienced professionals.</p>
+                  
                 </div><!-- End / service -->
                 <!-- service -->
                 <!--<div class="service">
@@ -105,13 +341,33 @@
                   <p class="service__text">Gigsnap is also specialized in planning Destination wedding management services. It is most couple’s desire to adventure off to an exotic location somewhere to have their dream wedding. </p>
                 </div>End / service -->
                 <div class="service">
-                  <h2 class="service__title">Live Events & Producttion</h2>
-                  <p class="service__text">We have all the necessary equipment to produce a high-quality show, including sound systems, lighting, and staging. They will also have backup equipment in case of technical issues, ensuring that the show goes on smoothly without any interruptions. Professional concert production companies invest in the latest and best equipment to provide the highest quality experience for your audience.</p>
+                  <h2 class="service__title">Weddings</h2>
+                  <p class="service__text">Gigsnap is also specialized in planning Destination wedding management services. It is most couple’s desire to adventure off to an exotic location somewhere to have their dream wedding. </p>
 
-                </div><!-- End / service -->              
+                </div><!-- End / service -->
+
                 <!-- service -->
               </div>
-              <div style="text-align: center;"><small>© 2020-2024 Design by <a href="https://crackthehack.in" target="_blank">Gigsnap</a></small></div>
+<!-- partial -->  
+
+<!--Video Slider-->
+ 
+
+<!--Video Slider End-->
+
+              <div style="text-align: center;margin-top: 450px">  <div class="card">
+  <div class="imgBox">
+    <div style="background-color: black"><span id="K" style="font-size: 20px;text-align: center;">About Us...</span></div>
+    <img src="assets/images/1.jpg" alt="">
+  </div>
+  <div class="details">
+    <p><div class="glow">
+  <div class="sign">
+    <div class="neon-blue" id="title">Ev<span id="fade">ent</span> Manag<span id="fade">men</span>t</div>
+   </div>
+</div><br><span style="font-family: sans-serif;text-shadow: 0px 0px 4px black">Gigsnap was founded in 2020 at Bhopal and we have successfully executed more than 50+ events till date in India, We are a professional Event Management Company specialized in providing one stop solutions to all your event management needs.</span></p>
+  </div>
+</div>  <small>© 2020-2024 Design by <a href="https://crackthehack.in" target="_blank">Gigsnap</a></small></div>
 
             </div>
           </div>
